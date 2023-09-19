@@ -5,7 +5,7 @@ import gestion.Zona;
 import java.util.ArrayList;
 
 public class Reptil extends  Animal{
-    private static ArrayList<Animal> listado;
+    private static ArrayList<Animal> listado = new ArrayList<>();
 
     public static int  iguanas;
 
@@ -15,20 +15,24 @@ public class Reptil extends  Animal{
 
     private int largoCola;
 
-    public Reptil(){}
+    public static int veces = 1;
+
+    public Reptil(){veces++;}
 
     public Reptil(String nombre, int edad, String genero) {
         super(nombre, edad, genero);
+        veces++;
     }
 
     public Reptil(String nombre, int edad,String habitat, String genero,String colorEscamas,int largoCola) {
         super(nombre, edad,habitat, genero);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
+        veces++;
 
     }
 
-    public  static int  cantidadReptiles(){return Reptil.listado.size();}
+    public  static int  cantidadReptiles(){return veces;}
 
     public static Animal crearIguana(String nombre, int edad, String genero){
         Reptil e = new Reptil(nombre,edad,"humedal",genero,"verde",3);

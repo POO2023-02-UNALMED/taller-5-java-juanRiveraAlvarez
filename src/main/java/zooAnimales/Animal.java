@@ -49,7 +49,7 @@ public class Animal {
         String  comp = "Mamiferos: "+Mamifero.cantidadMamiferos()+"\n" +
                 "Aves: "+Ave.cantidadAves()+"\n" +
                 "Reptiles: "+Reptil.cantidadReptiles()+"\n" +
-                "Peces: "+Pez.cantidadPeces()+"2\n" +
+                "Peces: "+Pez.cantidadPeces()+"\n" +
                 "Anfibios: "+Anfibio.cantidadAnfibios();
         return comp;
     };

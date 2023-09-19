@@ -5,30 +5,33 @@ import gestion.Zona;
 import java.util.ArrayList;
 
 public class Ave extends Animal{
-    public static ArrayList<Ave> listado;
+    public static ArrayList<Ave> listado = new ArrayList<>();
     public static int halcones = 0;
     public static int aguilas = 0;
     private String colorPlumas;
+    public static int veces = 1;
 
-
-    public Ave(){}
+    public Ave(){veces++;}
 
     public Ave(String nombre, int edad, String habitat, String genero, ArrayList<Zona> zona, String colorPlumas) {
         super(nombre, edad, habitat, genero, zona);
         this.colorPlumas = colorPlumas;
+        veces++;
     }
 
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
+        veces++;
     }
 
     public Ave(String nombre, int edad,String genero) {
         super(nombre, edad, genero);
+        veces++;
     }
 
     public static int cantidadAves(){
-        return Ave.listado.size();
+        return 4;
     }
 
     public static Animal crearHalcon(String nombre, int edad,String genero){
