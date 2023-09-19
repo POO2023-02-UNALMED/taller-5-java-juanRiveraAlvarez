@@ -8,6 +8,8 @@ public class Ejecutar {
 
 
     public static void main(String[] args) {
+
+
         new Anfibio();
         new Anfibio();
         new Mamifero();
@@ -26,9 +28,9 @@ public class Ejecutar {
         if(Animal.totalPorTipo().equals(comp)) {
             ok = true;
         }
-
-        System.out.println(Animal.totalPorTipo());
         System.out.println(ok);
+
+
     }
 
 
